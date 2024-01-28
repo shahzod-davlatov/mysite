@@ -1,3 +1,5 @@
+import plugin from 'tailwindcss/plugin';
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -9,7 +11,76 @@ export default {
     './error.vue',
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        background: '#010C15',
+        primary: '#011221',
+        'primary-light': '#011627',
+        'primary-dark': '#01080E',
+        secondary: '#607B96',
+        'secondary-green': '#3C9D93',
+        'secondary-blue': '#4D5BCE',
+        'secondary-white': '#FFFFFF',
+        accent: '#FEA55F',
+        'accent-green': '#43D9AD',
+        'accent-red': '#E99287',
+        'accent-purple': '#C98BDF',
+        line: '#1E2D3D',
+        'gradient-blue': '#4D5BCE',
+        'gradient-green': '#43D9AD',
+      },
+      fontSize: {
+        headline: '3.875rem',
+        subheadline: '2rem',
+        body: '1.125rem',
+        label: '1rem',
+        code: '0.875rem',
+      },
+    },
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ addComponents }) {
+      addComponents({
+        '.btn': {
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          borderRadius: '0.5rem',
+          padding: '0.625rem 0.875rem',
+        },
+        '.btn-primary': {
+          color: '#01080E',
+          backgroundColor: '#FEA55F',
+          '&:hover': {
+            backgroundColor: '#FFAC6B',
+          },
+        },
+        '.btn-default': {
+          color: '#FFFFFF',
+          backgroundColor: '#1C2B3A',
+          '&:hover': {
+            backgroundColor: '#263B50',
+          },
+        },
+        '.btn-ghost': {
+          color: '#FFFFFF',
+          backgroundColor: 'transparent',
+          boxSizing: 'border-box',
+          border: '1px solid #FFFFFF',
+          '&:hover': {
+            border: '1px solid #FFFFFF80',
+          },
+        },
+        '.btn-social': {
+          fill: '#607B96',
+          height: '1.5rem',
+          width: '1.5rem',
+          opacity: '0.5',
+          '&:hover': {
+            opacity: '1',
+          },
+        },
+      });
+    }),
+  ],
 };
