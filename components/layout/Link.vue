@@ -7,12 +7,13 @@ defineProps<NuxtLinkProps & { active?: boolean }>();
 <template>
   <NuxtLink
     v-bind="$props"
-    class="relative flex h-full items-center px-8 text-label text-secondary"
+    class="relative flex h-full items-center justify-center border-line text-label text-secondary transition hover:backdrop-brightness-125"
     :class="[
-      { 
+      {
         'text-secondary-white': active,
-        'after:absolute after:-inset-x-px after:-bottom-0.5 after:h-[3px] after:bg-accent': active
-      }
+        'after:absolute after:-inset-x-px after:-bottom-0.5 after:h-[3px] after:bg-accent':
+          active,
+      },
     ]"
   >
     <slot />

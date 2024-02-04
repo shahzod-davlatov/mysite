@@ -1,4 +1,6 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { TELEGRAM_LINK, VK_LINK, GITHUB_LINK } from '~/constants/links';
+</script>
 
 <template>
   <div class="flex h-14 border-t border-line">
@@ -6,11 +8,27 @@
       <span class="text-label text-secondary">find me in:</span>
     </div>
     <LayoutLink
-      to="https://github.com/shahzod418"
+      :to="TELEGRAM_LINK"
       target="_blank"
-      class="ml-auto border-l border-line"
+      class="group/telegram w-14 border-r"
     >
-      <div class="flex h-full items-center">
+      <IconTelegram
+        class="btn-social transition group-hover/telegram:opacity-100"
+      />
+    </LayoutLink>
+    <LayoutLink
+      :to="VK_LINK"
+      target="_blank"
+      class="group/vk w-14 border-r"
+    >
+      <IconVk class="btn-social transition group-hover/vk:opacity-100" />
+    </LayoutLink>
+    <LayoutLink
+      :to="GITHUB_LINK"
+      target="_blank"
+      class="group ml-auto border-l px-8"
+    >
+      <div class="flex h-full items-center group-hover:underline">
         <span>@shahzod418</span>
         <IconGithub class="btn-social ml-1 opacity-100" />
       </div>

@@ -14,6 +14,7 @@
   },
   "devDependencies": {
     "@nuxt/eslint-config": "^0.2.0",
+    "@nuxt/image": "latest",
     "@typescript-eslint/eslint-plugin": "^6.19.1",
     "@typescript-eslint/parser": "^6.19.1",
     "autoprefixer": "^10.4.17",
