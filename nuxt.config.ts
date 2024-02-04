@@ -12,5 +12,5 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-  modules: ['nuxt-lucide-icons', '@nuxt/image'],
+  modules: ['@nuxt/image'],
 });
