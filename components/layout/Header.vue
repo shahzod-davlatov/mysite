@@ -1,9 +1,13 @@
 <script setup lang="ts">
+import { APP_TITLE } from '~/constants/title';
+
 const route = useRoute();
 
 const { headerLinks } = useHeaderLinks();
 
 const { isMobileOrTablet } = useDevice();
+
+const localePath = useLocalePath();
 </script>
 
 <template>
@@ -12,18 +16,20 @@ const { isMobileOrTablet } = useDevice();
       class="relative flex h-full min-w-full items-center justify-between border-line px-5 md:min-w-80 md:border-r"
     >
       <h1 class="text-label text-secondary">
-        shahzod-davlatov
+        {{ APP_TITLE }}
       </h1>
       <LayoutMobileMenu v-if="isMobileOrTablet" />
     </div>
     <LayoutLink
-      v-for="{ path, title } in headerLinks"
+      v-for="({ path, title }, index) in headerLinks"
       :key="path"
-      :active="route.fullPath === path"
-      :to="path"
-      class="hidden border-r px-8 last:ml-auto last:border-l last:border-r-0 md:flex"
+      :active="route.fullPath === localePath(path)"
+      :class="{ 'ml-auto border-l': index === headerLinks.length - 1 }"
+      :to="localePath(path)"
+      class="hidden border-r px-8 md:flex"
     >
       {{ title }}
     </LayoutLink>
+    <LayoutTranslateLink class="hidden md:flex" />
   </div>
 </template>

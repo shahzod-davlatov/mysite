@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import { TELEGRAM_LINK, VK_LINK, GITHUB_LINK } from '~/constants/links';
+import { GITHUB_TITLE } from '~/constants/title';
+
+const { t } = useI18n();
 </script>
 
 <template>
@@ -7,7 +10,7 @@ import { TELEGRAM_LINK, VK_LINK, GITHUB_LINK } from '~/constants/links';
     <div
       class="flex h-full grow items-center border-r border-line px-5 md:grow-0"
     >
-      <span class="text-label text-secondary">find me in:</span>
+      <span class="text-label text-secondary">{{ t('findMe') }}</span>
     </div>
     <LayoutLink
       :to="TELEGRAM_LINK"
@@ -36,7 +39,7 @@ import { TELEGRAM_LINK, VK_LINK, GITHUB_LINK } from '~/constants/links';
       <div
         class="hidden h-full items-center group-hover/github:underline md:flex"
       >
-        <span>@shahzod418</span>
+        <span>{{ GITHUB_TITLE }}</span>
         <IconGithub class="btn-social ml-1 opacity-100" />
       </div>
     </LayoutLink>

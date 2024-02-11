@@ -1,29 +1,32 @@
 <script setup lang="ts">
 import { GITHUB_LINK } from '~/constants/links';
+import { CONST_TITLE, GITHUB_LINK_TITLE } from '~/constants/title';
 
 const { isMobile } = useDevice();
+
+const { t } = useI18n();
 </script>
 
 <template>
   <div class="flex h-full items-center justify-center gap-x-20">
     <div class="p-7">
       <h4 class="text-body text-primary-white">
-        Hi all. I am
+        {{ t('greeting') }}
       </h4>
       <h2
         class="text-headline leading-none text-primary-white md:leading-tight"
       >
-        Shahzod Davlatov
+        {{ t('name') }}
       </h2>
       <h3 class="text-subheadline leading-none text-secondary-blue">
-        &gt; Frontend developer
+        &gt; {{ t('developer') }}
       </h3>
       <p class="mt-20 text-secondary">
-        // find my profile on Github:
+        &sol;&sol; {{ t('findGithub') }}
       </p>
       <p class="mt-2.5 text-label text-primary-white">
-        <span class="text-secondary-blue">const </span>
-        <span class="text-accent-green">githubLink</span> =
+        <span class="text-secondary-blue">{{ CONST_TITLE }}&nbsp;</span>
+        <span class="text-accent-green">{{ GITHUB_LINK_TITLE }}</span> &equals;
         <span class="text-accent-red">&quot;</span>
         <span class="select-all text-accent-red underline">{{
           GITHUB_LINK

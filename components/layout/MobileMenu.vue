@@ -1,25 +1,21 @@
 <script setup lang="ts">
+import { APP_TITLE } from '~/constants/title';
+
 const isOpen = ref(false);
 
 const { headerLinks } = useHeaderLinks();
 
 const router = useRouter();
+
+const localePath = useLocalePath();
 </script>
 
 <template>
-  <svg
+  <IconMenu
     v-if="!isOpen"
-    class="md:hidden"
-    height="16"
-    viewBox="0 0 18 16"
-    width="18"
+    class="h-5 w-4 fill-secondary md:hidden"
     @click="isOpen = true"
-  >
-    <path
-      d="M0 0H18V2H0V0ZM0 7H18V9H0V7ZM0 14H18V16H0V14Z"
-      fill="#607B96"
-    />
-  </svg>
+  />
   <Teleport to="body">
     <div
       v-if="isOpen"
@@ -32,35 +28,27 @@ const router = useRouter();
           class="flex h-14 items-center justify-between border-b border-line px-5"
         >
           <div class="text-label text-secondary">
-            shahzod-davlatov
+            {{ APP_TITLE }}
           </div>
-          <svg
+          <IconClose
             v-if="isOpen"
-            class="md:hidden"
-            height="16"
-            viewBox="0 0 16 16"
-            width="16"
+            class="size-4 fill-secondary md:hidden"
             @click="isOpen = false"
-          >
-            <path
-              d="M8 6.2225L14.2225 0L16 1.7775L9.7775 8L16 14.2225L14.2225 16L8 9.7775L1.7775 16L0 14.2225L6.2225 8L0 1.7775L1.7775 0L8 6.2225Z"
-              fill="#607B96"
-            />
-          </svg>
+          />
         </div>
         <nav class="grow">
           <div
             v-for="{ path, title } in headerLinks"
             :key="path"
             class="flex h-14 items-center border-b border-line pl-4 text-label text-primary-white"
-            @click="
-              router.push(path);
-              isOpen = false;
-            "
+            @click="router.push(localePath(path)).then(() => (isOpen = false))"
           >
             {{ title }}
           </div>
         </nav>
+        <div class="flex h-14 border-t border-line">
+          <LayoutTranslateLink class="ml-auto border-l border-line" />
+        </div>
       </div>
     </div>
   </Teleport>

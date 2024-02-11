@@ -12,5 +12,15 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-  modules: ['@nuxt/image', '@vueuse/nuxt', '@nuxtjs/device'],
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en', 'ru'],
+  },
+  modules: [
+    '@nuxt/image',
+    '@vueuse/nuxt',
+    '@nuxtjs/device',
+    '@nuxtjs/i18n',
+    '@vee-validate/nuxt',
+  ],
 });
