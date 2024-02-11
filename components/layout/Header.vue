@@ -1,46 +1,29 @@
 <script setup lang="ts">
-import {
-  MAIN_PAGE_LINK,
-  ABOUT_ME_PAGE_LINK,
-  PROJECTS_PAGE_LINK,
-  CONTACT_ME_PAGE_LINK,
-} from '~/constants/links';
-
 const route = useRoute();
+
+const { headerLinks } = useHeaderLinks();
+
+const { isMobileOrTablet } = useDevice();
 </script>
 
 <template>
   <div class="flex h-14 border-b border-line">
-    <div class="flex h-full min-w-80 items-center border-r border-line pl-5">
-      <h1 class="text-label text-secondary">shahzod-davlatov</h1>
+    <div
+      class="relative flex h-full min-w-full items-center justify-between border-line px-5 md:min-w-80 md:border-r"
+    >
+      <h1 class="text-label text-secondary">
+        shahzod-davlatov
+      </h1>
+      <LayoutMobileMenu v-if="isMobileOrTablet" />
     </div>
     <LayoutLink
-      :active="route.fullPath === MAIN_PAGE_LINK"
-      :to="MAIN_PAGE_LINK"
-      class="border-r px-8"
+      v-for="{ path, title } in headerLinks"
+      :key="path"
+      :active="route.fullPath === path"
+      :to="path"
+      class="hidden border-r px-8 last:ml-auto last:border-l last:border-r-0 md:flex"
     >
-      _hello
-    </LayoutLink>
-    <LayoutLink
-      :active="route.fullPath === ABOUT_ME_PAGE_LINK"
-      :to="ABOUT_ME_PAGE_LINK"
-      class="border-r px-8"
-    >
-      _about-me
-    </LayoutLink>
-    <LayoutLink
-      :active="route.fullPath === PROJECTS_PAGE_LINK"
-      :to="PROJECTS_PAGE_LINK"
-      class="border-r px-8"
-    >
-      _projects
-    </LayoutLink>
-    <LayoutLink
-      :active="route.fullPath === CONTACT_ME_PAGE_LINK"
-      :to="CONTACT_ME_PAGE_LINK"
-      class="ml-auto border-l px-8"
-    >
-      _contact-me
+      {{ title }}
     </LayoutLink>
   </div>
 </template>

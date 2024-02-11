@@ -1,5 +1,5 @@
 <template>
-  <div class="h-screen bg-background p-4 md:p-8">
+  <div class="h-dvh bg-background p-2 md:p-4">
     <div
       class="flex h-full flex-col overflow-hidden rounded-lg border border-line bg-primary-light"
     >
