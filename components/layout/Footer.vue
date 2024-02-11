@@ -9,24 +9,20 @@ import { TELEGRAM_LINK, VK_LINK, GITHUB_LINK } from '~/constants/links';
     </div>
     <LayoutLink
       :to="TELEGRAM_LINK"
-      target="_blank"
       class="group/telegram w-14 border-r"
+      target="_blank"
     >
       <IconTelegram
         class="btn-social transition group-hover/telegram:opacity-100"
       />
     </LayoutLink>
-    <LayoutLink
-      :to="VK_LINK"
-      target="_blank"
-      class="group/vk w-14 border-r"
-    >
+    <LayoutLink :to="VK_LINK" class="group/vk w-14 border-r" target="_blank">
       <IconVk class="btn-social transition group-hover/vk:opacity-100" />
     </LayoutLink>
     <LayoutLink
       :to="GITHUB_LINK"
-      target="_blank"
       class="group ml-auto border-l px-8"
+      target="_blank"
     >
       <div class="flex h-full items-center group-hover:underline">
         <span>@shahzod418</span>
