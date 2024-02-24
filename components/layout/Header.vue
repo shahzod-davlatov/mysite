@@ -13,7 +13,7 @@ const localePath = useLocalePath();
 <template>
   <div class="flex h-14 border-b border-line">
     <div
-      class="relative flex h-full min-w-full items-center justify-between border-line px-5 md:min-w-80 md:border-r"
+      class="relative flex h-full min-w-full items-center justify-between border-line px-5 md:border-r lg:min-w-60 xl:min-w-80"
     >
       <h1 class="text-label text-secondary">
         {{ APP_TITLE }}

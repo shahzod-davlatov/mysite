@@ -16,11 +16,18 @@ export default defineNuxtConfig({
     defaultLocale: 'en',
     locales: ['en', 'ru'],
   },
+  googleFonts: {
+    families: {
+      'Fira Code': '300..700',
+    },
+    preload: true,
+  },
   modules: [
     '@nuxt/image',
     '@vueuse/nuxt',
     '@nuxtjs/device',
     '@nuxtjs/i18n',
     '@vee-validate/nuxt',
+    '@nuxtjs/google-fonts',
   ],
 });
