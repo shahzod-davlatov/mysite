@@ -21,11 +21,7 @@ const { t } = useI18n();
         class="btn-social transition group-hover/telegram:opacity-100"
       />
     </LayoutLink>
-    <LayoutLink
-      :to="VK_LINK"
-      class="group/vk w-14 border-r"
-      target="_blank"
-    >
+    <LayoutLink :to="VK_LINK" class="group/vk w-14 border-r" target="_blank">
       <IconVk class="btn-social transition group-hover/vk:opacity-100" />
     </LayoutLink>
     <LayoutLink

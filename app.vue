@@ -6,14 +6,15 @@ useHead({
   meta: [
     { name: 'description', content: 'Frontend Developer Davlatov Shahzod' },
   ],
-  link: [
-    { rel: 'icon', type: 'image/svg+xml', href: '/box.svg' }
-  ]
+  link: [{ rel: 'icon', type: 'image/svg+xml', href: '/box.svg' }],
 });
 </script>
 
 <template>
-  <NuxtLayout>
-    <NuxtPage />
-  </NuxtLayout>
+  <Body class="bg-background">
+    <Base id="test" />
+    <NuxtLayout>
+      <NuxtPage />
+    </NuxtLayout>
+  </Body>
 </template>

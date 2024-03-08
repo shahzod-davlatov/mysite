@@ -17,10 +17,7 @@ const localePath = useLocalePath();
     @click="isOpen = true"
   />
   <Teleport to="body">
-    <div
-      v-if="isOpen"
-      class="fixed z-10 h-dvh w-full bg-background p-2 md:p-4"
-    >
+    <div v-if="isOpen" class="fixed z-10 h-dvh w-full bg-background p-2 md:p-4">
       <div
         class="flex h-full flex-col overflow-hidden rounded-lg border border-line bg-primary-light"
       >
