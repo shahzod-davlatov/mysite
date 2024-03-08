@@ -6,6 +6,9 @@ useHead({
   meta: [
     { name: 'description', content: 'Frontend Developer Davlatov Shahzod' },
   ],
+  link: [
+    { rel: 'icon', type: 'image/svg+xml', href: '/box.svg' }
+  ]
 });
 </script>
 
