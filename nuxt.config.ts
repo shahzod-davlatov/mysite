@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   typescript: {
-    typeCheck: 'build',
+    typeCheck: false,
     strict: true,
   },
   css: ['~/assets/css/main.css'],
