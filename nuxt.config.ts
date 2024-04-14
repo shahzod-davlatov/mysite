@@ -1,8 +1,9 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
+  telemetry: false,
   typescript: {
-    typeCheck: false,
+    typeCheck: 'build',
     strict: true,
   },
   css: ['~/assets/css/main.css'],
@@ -29,5 +30,6 @@ export default defineNuxtConfig({
     '@nuxtjs/i18n',
     '@vee-validate/nuxt',
     '@nuxtjs/google-fonts',
+    '@nuxt/eslint',
   ],
 });
