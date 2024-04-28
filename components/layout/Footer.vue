@@ -30,13 +30,21 @@ const linksMap = [
 </script>
 
 <template>
-  <div class="col-span-full flex justify-end border-t border-line">
+  <div class="col-span-full flex border-t border-line">
+    <div
+      class="flex h-full grow items-center border-r border-line px-4 md:grow-0 md:pl-6"
+    >
+      <span class="text-label text-secondary">{{ t('findMe') }}</span>
+    </div>
     <LayoutLink
-      v-for="{ to, group, groupHover, icon } in linksMap"
+      v-for="({ to, group, groupHover, icon }, index) in linksMap"
       :key="group"
-      :class="group"
+      :class="[
+        group,
+        { 'border-r-0 md:border-r': index === linksMap.length - 1 },
+      ]"
       :href="to"
-      class="w-14 border-l border-line"
+      class="w-14 border-r border-line"
       target="_blank"
     >
       <component :is="icon" :class="groupHover" class="btn-social transition" />
