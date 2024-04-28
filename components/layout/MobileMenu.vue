@@ -16,11 +16,13 @@ const handleRoute = async (path: string) => {
 </script>
 
 <template>
-  <IconMenu
-    v-if="!isOpen"
-    class="size-4 fill-secondary md:hidden"
-    @click="isOpen = true"
-  />
+  <Transition>
+    <IconMenu
+      v-if="!isOpen"
+      class="size-4 fill-secondary md:hidden"
+      @click="isOpen = true"
+    />
+  </Transition>
   <Teleport to="body">
     <Transition>
       <div
