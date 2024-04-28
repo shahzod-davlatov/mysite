@@ -5,6 +5,8 @@ import IconVk from '~/components/icon/Vk.vue';
 
 import { TELEGRAM_LINK, VK_LINK, GITHUB_LINK } from '~/constants/links';
 
+const { t } = useI18n();
+
 const linksMap = [
   {
     to: TELEGRAM_LINK,
