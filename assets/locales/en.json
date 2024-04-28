@@ -9,5 +9,14 @@
   "name": "Shahzod Davlatov",
   "developer": "Frontend developer",
   "findGithub": "find my profile on Github:",
-  "findMe": "find me in:"
+  "findMe": "find me in:",
+  "personalInfo": "personal-info",
+  "professionalInfo": "professional-info",
+  "hobbies": "hobbies",
+  "contacts": "contacts",
+  "bio": "bio",
+  "interests": "interests",
+  "education": "education",
+  "highSchool": "high-school",
+  "university": "university"
 }

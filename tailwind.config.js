@@ -25,6 +25,8 @@ export default {
       'accent-green': '#43D9AD',
       'accent-red': '#E99287',
       'accent-purple': '#C98BDF',
+      'accent-blue': '#3A49A4',
+      'accent-light': '#81A1C1',
       line: '#1E2D3D',
       'gradient-blue': '#4D5BCE',
       'gradient-green': '#43D9AD',
@@ -38,7 +40,7 @@ export default {
     },
     extend: {
       gridTemplateColumns: {
-        main: '20rem 1fr',
+        main: '21.5rem 1fr',
       },
       gridTemplateRows: {
         main: '3.5rem 1fr 3.25rem',

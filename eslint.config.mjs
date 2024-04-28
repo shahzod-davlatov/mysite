@@ -5,6 +5,7 @@ export default withNuxt({
   files: ['**/*.ts', '**/*.vue'],
   rules: {
     'vue/multi-word-component-names': 'off',
+    'vue/no-multiple-template-root': 'off',
     'vue/define-props-declaration': ['error', 'type-based'],
     'vue/define-emits-declaration': ['error', 'type-literal'],
     'vue/attributes-order': [

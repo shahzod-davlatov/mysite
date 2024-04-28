@@ -2,8 +2,14 @@
 import IconGithub from '~/components/icon/Github.vue';
 import IconTelegram from '~/components/icon/Telegram.vue';
 import IconVk from '~/components/icon/Vk.vue';
+import IconHabr from '~/components/icon/Habr.vue';
 
-import { TELEGRAM_LINK, VK_LINK, GITHUB_LINK } from '~/constants/links';
+import {
+  TELEGRAM_LINK,
+  VK_LINK,
+  GITHUB_LINK,
+  HABR_LINK,
+} from '~/constants/links';
 
 const { t } = useI18n();
 
@@ -25,6 +31,12 @@ const linksMap = [
     group: 'group/github',
     groupHover: 'group-hover/github:opacity-100',
     icon: IconGithub,
+  },
+  {
+    to: HABR_LINK,
+    group: 'group/habr',
+    groupHover: 'group-hover/habr:opacity-100',
+    icon: IconHabr,
   },
 ];
 </script>

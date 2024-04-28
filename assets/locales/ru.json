@@ -9,5 +9,14 @@
   "name": "Шахзод Давлатов",
   "developer": "Frontend разработчик",
   "findGithub": "найдите мой профиль на Github:",
-  "findMe": "найди меня в:"
+  "findMe": "найди меня в:",
+  "personalInfo": "личная-информация",
+  "professionalInfo": "профессиональная-информация",
+  "hobbies": "хобби",
+  "contacts": "контакты",
+  "bio": "биография",
+  "interests": "интересы",
+  "education": "образование",
+  "highSchool": "школа",
+  "university": "университет"
 }

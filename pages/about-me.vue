@@ -1,3 +1,4 @@
 <template>
-  <div>About me</div>
+  <AboutMeMainMenu />
+  <!-- <div>About me</div> -->
 </template>
