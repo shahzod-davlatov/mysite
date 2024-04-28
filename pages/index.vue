@@ -2,13 +2,13 @@
 import { GITHUB_LINK } from '~/constants/links';
 import { CONST_TITLE, GITHUB_LINK_TITLE } from '~/constants/title';
 
-const { isMobile } = useDevice();
-
 const { t } = useI18n();
 </script>
 
 <template>
-  <div class="flex h-full items-center justify-center gap-x-20">
+  <div
+    class="col-span-full flex h-full items-center justify-center gap-x-20 overflow-scroll"
+  >
     <div class="p-7">
       <h4 class="text-body text-primary-white">
         {{ t('greeting') }}
@@ -34,7 +34,7 @@ const { t } = useI18n();
         <span class="text-accent-red">&quot;</span>
       </p>
     </div>
-    <div v-if="!isMobile" class="relative hidden h-5/6 w-1/3 md:block">
+    <div class="relative hidden h-5/6 w-1/3 md:block">
       <NuxtImg
         class="absolute top-1/4 -translate-y-1/2"
         loading="lazy"

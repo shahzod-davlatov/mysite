@@ -26,7 +26,6 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/image',
     '@vueuse/nuxt',
-    '@nuxtjs/device',
     '@nuxtjs/i18n',
     '@vee-validate/nuxt',
     '@nuxtjs/google-fonts',

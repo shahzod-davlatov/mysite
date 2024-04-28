@@ -36,6 +36,14 @@ export default {
       label: '1rem',
       code: '0.875rem',
     },
+    extend: {
+      gridTemplateColumns: {
+        main: '20rem 1fr',
+      },
+      gridTemplateRows: {
+        main: '3.5rem 1fr 3.25rem',
+      },
+    },
   },
   plugins: [
     plugin(function ({ addComponents }) {
