@@ -38,6 +38,7 @@ export default {
       body: '1.125rem',
       label: '1rem',
       code: '0.875rem',
+      'markdown-h1': '2rem',
     },
     extend: {
       gridTemplateColumns: {
@@ -51,6 +52,22 @@ export default {
   plugins: [
     plugin(function ({ addComponents }) {
       addComponents({
+        h1: {
+          fontSize: '2rem',
+          color: '#FFFFFF',
+        },
+        h2: {
+          fontSize: '1.5rem',
+          color: '#FFFFFF',
+        },
+        h3: {
+          fontSize: '1.25rem',
+          color: '#FFFFFF',
+        },
+        p: {
+          fontSize: '1rem',
+          color: '#FFFFFF',
+        },
         '.btn': {
           display: 'flex',
           justifyContent: 'center',

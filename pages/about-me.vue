@@ -1,10 +1,7 @@
 <script setup lang="ts">
 import { ROUTES_MAP } from '~/constants/routes';
 
-definePageMeta({
-  name: ROUTES_MAP.ABOUT_ME,
-  middleware: ['about-me-redirect'],
-});
+definePageMeta({ name: ROUTES_MAP.ABOUT_ME, middleware: ['redirect'] });
 
 const { t } = useI18n();
 
@@ -37,21 +34,23 @@ const handleChangeInfo = (
       <IconTerminal
         :class="{ 'opacity-50': !isProfessionalInfo }"
         class="size-6 cursor-pointer fill-secondary"
-        @click="handleChangeInfo(ROUTES_MAP.PROFESSIONAL_INFO)"
+        @click="handleChangeInfo(ROUTES_MAP.PROFESSIONAL_INFO_SKILLS)"
       />
       <IconUser
         :class="{ 'opacity-50': !isPersonalInfo }"
         class="size-6 cursor-pointer fill-secondary"
-        @click="handleChangeInfo(ROUTES_MAP.PERSONAL_INFO)"
+        @click="handleChangeInfo(ROUTES_MAP.PERSONAL_INFO_BIO)"
       />
       <IconGamepad
         :class="{ 'opacity-50': !isHobbies }"
         class="size-6 cursor-pointer fill-secondary"
-        @click="handleChangeInfo(ROUTES_MAP.HOBBIES)"
+        @click="handleChangeInfo(ROUTES_MAP.HOBBIES_GAMES)"
       />
     </div>
     <div class="grow">
+      <AboutMeProfessionalMenu v-if="isProfessionalInfo" />
       <AboutMePersonalMenu v-if="isPersonalInfo" />
+      <AboutMeHobbiesMenu v-if="isHobbies" />
     </div>
   </div>
   <div>

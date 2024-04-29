@@ -14,12 +14,18 @@ const openedState = useOpenedState();
       v-if="openedState.personalInfo"
       class="flex flex-col gap-2 py-3.5 pl-7"
     >
-      <AboutMePersonalMenuItems v-model="openedState.education" />
+      <AboutMePersonalMenuItems />
     </div>
     <DropdownMainMenuMobile
       v-model="openedState.professionalInfo"
       :title="t('professionalInfo')"
     />
+    <div
+      v-if="openedState.personalInfo"
+      class="flex flex-col gap-2 py-3.5 pl-7"
+    >
+      <AboutMeProfessionalMenuItems />
+    </div>
     <DropdownMainMenuMobile
       v-model="openedState.hobbies"
       :title="t('hobbies')"

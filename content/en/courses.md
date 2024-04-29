@@ -1,0 +1,3 @@
+# Courses
+
+Content coming soon

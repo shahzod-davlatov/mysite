@@ -7,15 +7,14 @@ const openedState = useOpenedState();
 <template>
   <div class="border-b border-line py-2.5 pl-4">
     <DropdownMainMenu
-      v-model="openedState.personalInfo"
-      :title="t('personalInfo')"
+      v-model="openedState.professionalInfo"
+      :title="t('professionalInfo')"
     />
   </div>
   <div
-    v-if="openedState.personalInfo"
+    v-if="openedState.professionalInfo"
     class="flex flex-col gap-2 border-b border-line py-5 pl-4"
   >
-    <AboutMePersonalMenuItems />
+    <AboutMeProfessionalMenuItems />
   </div>
-  <DropdownContacts v-model="openedState.contacts" />
 </template>

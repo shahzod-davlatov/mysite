@@ -24,12 +24,18 @@ export default defineNuxtConfig({
     },
     preload: true,
   },
+  content: {
+    markdown: {},
+    highlight: {
+      theme: 'github-dark',
+      langs: ['ts', 'vue'],
+    },
+  },
   modules: [
     '@nuxt/image',
-    '@vueuse/nuxt',
     '@nuxtjs/i18n',
-    '@vee-validate/nuxt',
     '@nuxtjs/google-fonts',
     '@nuxt/eslint',
+    '@nuxt/content',
   ],
 });

@@ -12,7 +12,7 @@ const { t } = useI18n();
   <div
     class="col-span-full flex h-full items-center justify-center gap-x-20 overflow-scroll"
   >
-    <Test class="fixed h-5/6 lg:left-1/2 lg:-translate-x-1/4" />
+    <CommonBlurBackground class="fixed h-5/6 lg:left-1/2 lg:-translate-x-1/4" />
     <div class="relative p-7">
       <h4 class="text-body text-primary-white">
         {{ t('greeting') }}

@@ -3,6 +3,6 @@ export const useOpenedState = () =>
     personalInfo: true,
     professionalInfo: true,
     hobbies: true,
-    education: false,
-    contacts: false,
+    education: true,
+    contacts: true,
   }));

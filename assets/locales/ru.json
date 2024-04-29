@@ -18,5 +18,10 @@
   "interests": "интересы",
   "education": "образование",
   "courses": "курсы",
-  "university": "университет"
+  "university": "университет",
+  "skills": "навыки",
+  "experience": "опыт",
+  "books": "книги",
+  "games": "игры",
+  "music": "музыка"
 }
