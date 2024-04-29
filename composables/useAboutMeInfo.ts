@@ -40,11 +40,11 @@ export const useAboutMeInfo = () => {
       return t('interests');
     }
 
-    if (route.name === ROUTES_MAP.PERSONAL_INFO_COURSES) {
+    if (route.name === ROUTES_MAP.PROFESSIONAL_INFO_COURSES) {
       return t('courses');
     }
 
-    if (route.name === ROUTES_MAP.PERSONAL_INFO_UNIVERSITY) {
+    if (route.name === ROUTES_MAP.PROFESSIONAL_INFO_UNIVERSITY) {
       return t('university');
     }
 
