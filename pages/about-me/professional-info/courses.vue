@@ -14,6 +14,6 @@ const router = useRouter();
     @close="router.push({ name: ROUTES_MAP.PROFESSIONAL_INFO })"
   />
   <div class="p-5">
-    <ContentDoc :path="`/${locale}/courses`" />
+    <ContentDoc :head="false" :path="`/${locale}/courses`" />
   </div>
 </template>

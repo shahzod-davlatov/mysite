@@ -14,6 +14,6 @@ const router = useRouter();
     @close="router.push({ name: ROUTES_MAP.PERSONAL_INFO })"
   />
   <div class="p-5">
-    <ContentDoc :path="`/${locale}/interests`" />
+    <ContentDoc :head="false" :path="`/${locale}/interests`" />
   </div>
 </template>
