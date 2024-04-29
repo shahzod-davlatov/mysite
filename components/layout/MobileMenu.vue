@@ -55,7 +55,7 @@ const handleRoute = async (
             </span>
           </nav>
           <div class="flex border-t border-line">
-            <LayoutTranslateLink class="ml-auto border-l border-line" />
+            <LayoutTranslateButton class="ml-auto border-l border-line" />
           </div>
         </div>
       </div>

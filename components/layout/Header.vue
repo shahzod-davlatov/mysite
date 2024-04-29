@@ -25,6 +25,6 @@ const { headerLinks } = useHeaderLinks();
       :to="{ name }"
       class="border-r border-line px-8"
     />
-    <LayoutTranslateLink />
+    <LayoutTranslateButton />
   </nav>
 </template>
