@@ -32,23 +32,28 @@ export const useAboutMeInfo = () => {
   });
 
   const infoSubtitle = computed(() => {
-    if (route.name === ROUTES_MAP.PERSONAL_INFO_BIO) {
-      return t('bio');
+    switch (route.name) {
+      case ROUTES_MAP.PERSONAL_INFO_BIO:
+        return t('bio');
+      case ROUTES_MAP.PERSONAL_INFO_INTERESTS:
+        return t('interests');
+      case ROUTES_MAP.PROFESSIONAL_INFO_SKILLS:
+        return t('skills');
+      case ROUTES_MAP.PROFESSIONAL_INFO_EXPERIENCE:
+        return t('experience');
+      case ROUTES_MAP.PROFESSIONAL_INFO_COURSES:
+        return t('courses');
+      case ROUTES_MAP.PROFESSIONAL_INFO_UNIVERSITY:
+        return t('university');
+      case ROUTES_MAP.HOBBIES_GAMES:
+        return t('hobbies');
+      case ROUTES_MAP.HOBBIES_BOOKS:
+        return t('books');
+      case ROUTES_MAP.HOBBIES_MUSIC:
+        return t('music');
+      default:
+        return '';
     }
-
-    if (route.name === ROUTES_MAP.PERSONAL_INFO_INTERESTS) {
-      return t('interests');
-    }
-
-    if (route.name === ROUTES_MAP.PROFESSIONAL_INFO_COURSES) {
-      return t('courses');
-    }
-
-    if (route.name === ROUTES_MAP.PROFESSIONAL_INFO_UNIVERSITY) {
-      return t('university');
-    }
-
-    return '';
   });
 
   return {

@@ -23,5 +23,7 @@
   "experience": "experience",
   "books": "books",
   "games": "games",
-  "music": "music"
+  "music": "music",
+  "projects": "projects",
+  "all": "all"
 }

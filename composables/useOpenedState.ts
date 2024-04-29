@@ -5,4 +5,5 @@ export const useOpenedState = () =>
     hobbies: true,
     education: true,
     contacts: true,
+    projects: true,
   }));

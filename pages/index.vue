@@ -23,7 +23,7 @@ const { t } = useI18n();
         {{ t('name') }}
       </h2>
       <h3
-        class="text-subheadline-mobile mt-1.5 leading-none text-accent-green lg:mt-0 lg:text-subheadline lg:text-secondary-blue"
+        class="mt-1.5 text-subheadline-mobile leading-none text-accent-green lg:mt-0 lg:text-subheadline lg:text-secondary-blue"
       >
         &gt; {{ t('developer') }}
       </h3>

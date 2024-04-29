@@ -1,4 +1,5 @@
 import plugin from 'tailwindcss/plugin';
+import forms from '@tailwindcss/forms';
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -50,6 +51,7 @@ export default {
     },
   },
   plugins: [
+    forms('@tailwindcss/forms'),
     plugin(function ({ addComponents }) {
       addComponents({
         h1: {

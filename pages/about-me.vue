@@ -29,7 +29,7 @@ const handleChangeInfo = (
 </script>
 
 <template>
-  <div class="hidden border-r border-line lg:flex">
+  <div class="hidden overflow-scroll border-r border-line lg:flex">
     <div class="flex flex-col gap-8 border-r border-line pl-6 pr-5 pt-4">
       <IconTerminal
         :class="{ 'opacity-50': !isProfessionalInfo }"
@@ -53,7 +53,7 @@ const handleChangeInfo = (
       <AboutMeHobbiesMenu v-if="isHobbies" />
     </div>
   </div>
-  <div>
+  <div class="overflow-scroll">
     <div class="lg:hidden">
       <h3 class="mt-5 pl-7 text-code text-secondary-white">
         {{ t('links.aboutMe') }}

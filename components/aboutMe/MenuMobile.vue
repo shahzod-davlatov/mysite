@@ -30,6 +30,9 @@ const openedState = useOpenedState();
       v-model="openedState.hobbies"
       :title="t('hobbies')"
     />
+    <div v-if="openedState.hobbies" class="flex flex-col gap-2 py-3.5 pl-7">
+      <AboutMeHobbiesMenuItems />
+    </div>
     <DropdownContactsMobile v-model="openedState.contacts" />
   </div>
 </template>
