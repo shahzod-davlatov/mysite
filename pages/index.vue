@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import { GITHUB_LINK } from '~/constants/links';
+import { ROUTES_MAP } from '~/constants/routes';
 import { CONST_TITLE, GITHUB_LINK_TITLE } from '~/constants/title';
+
+definePageMeta({ name: ROUTES_MAP.MAIN });
 
 const { t } = useI18n();
 </script>
@@ -9,17 +12,18 @@ const { t } = useI18n();
   <div
     class="col-span-full flex h-full items-center justify-center gap-x-20 overflow-scroll"
   >
-    <div class="p-7">
+    <Test class="fixed h-5/6 lg:left-1/2 lg:-translate-x-1/4" />
+    <div class="relative p-7">
       <h4 class="text-body text-primary-white">
         {{ t('greeting') }}
       </h4>
       <h2
-        class="text-headline leading-none text-primary-white md:leading-tight"
+        class="text-headline leading-none text-primary-white lg:leading-tight"
       >
         {{ t('name') }}
       </h2>
       <h3
-        class="mt-1.5 text-subheadline leading-none text-secondary-blue md:mt-0"
+        class="text-subheadline-mobile mt-1.5 leading-none text-accent-green lg:mt-0 lg:text-subheadline lg:text-secondary-blue"
       >
         &gt; {{ t('developer') }}
       </h3>
@@ -34,7 +38,7 @@ const { t } = useI18n();
         <span class="text-accent-red">&quot;</span>
       </p>
     </div>
-    <div class="relative hidden h-5/6 w-1/3 md:block">
+    <div class="relative hidden h-5/6 w-1/3 lg:block">
       <NuxtImg
         class="absolute top-1/4 -translate-y-1/2"
         loading="lazy"

@@ -1,7 +1,7 @@
 <template>
-  <div class="h-dvh p-2 md:p-4">
+  <div class="h-dvh p-2 lg:p-4">
     <div
-      class="grid-rows-main grid h-full rounded-lg border border-line bg-primary-light md:grid-cols-main"
+      class="grid h-full grid-rows-main rounded-lg border border-line bg-primary-light lg:grid-cols-main"
     >
       <LayoutHeader />
       <slot />

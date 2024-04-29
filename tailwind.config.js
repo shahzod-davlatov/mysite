@@ -34,6 +34,7 @@ export default {
     fontSize: {
       headline: '3.875rem',
       subheadline: '2rem',
+      'subheadline-mobile': '1.25rem',
       body: '1.125rem',
       label: '1rem',
       code: '0.875rem',

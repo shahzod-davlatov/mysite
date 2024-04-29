@@ -1,28 +1,28 @@
-import {
-  MAIN_PAGE_LINK,
-  ABOUT_ME_PAGE_LINK,
-  PROJECTS_PAGE_LINK,
-  CONTACT_ME_PAGE_LINK,
-} from '~/constants/links';
+import { ROUTES_MAP } from '~/constants/routes';
+
+type HeaderLink = {
+  name: (typeof ROUTES_MAP)[keyof typeof ROUTES_MAP];
+  title: string;
+};
 
 export const useHeaderLinks = () => {
   const { t } = useI18n();
 
-  const headerLinks = computed(() => [
+  const headerLinks = computed<HeaderLink[]>(() => [
     {
-      path: MAIN_PAGE_LINK,
+      name: ROUTES_MAP.MAIN,
       title: t('links.hello'),
     },
     {
-      path: ABOUT_ME_PAGE_LINK,
+      name: ROUTES_MAP.ABOUT_ME,
       title: t('links.aboutMe'),
     },
     {
-      path: PROJECTS_PAGE_LINK,
+      name: ROUTES_MAP.PROJECTS,
       title: t('links.projects'),
     },
     {
-      path: CONTACT_ME_PAGE_LINK,
+      name: ROUTES_MAP.CONTACT_ME,
       title: t('links.contactMe'),
     },
   ]);

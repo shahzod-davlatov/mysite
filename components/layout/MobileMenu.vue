@@ -1,16 +1,18 @@
 <script setup lang="ts">
 import { APP_TITLE } from '~/constants/title';
 
+import type { ROUTES_MAP } from '~/constants/routes';
+
 const isOpen = ref(false);
 
 const { headerLinks } = useHeaderLinks();
 
 const router = useRouter();
 
-const localePath = useLocalePath();
-
-const handleRoute = async (path: string) => {
-  await router.push(localePath(path));
+const handleRoute = async (
+  name: (typeof ROUTES_MAP)[keyof typeof ROUTES_MAP]
+) => {
+  await router.push({ name });
   isOpen.value = false;
 };
 </script>
@@ -19,7 +21,7 @@ const handleRoute = async (path: string) => {
   <Transition>
     <IconMenu
       v-if="!isOpen"
-      class="size-4 fill-secondary md:hidden"
+      class="size-4 fill-secondary lg:hidden"
       @click="isOpen = true"
     />
   </Transition>
@@ -27,10 +29,10 @@ const handleRoute = async (path: string) => {
     <Transition>
       <div
         v-if="isOpen"
-        class="fixed z-10 h-dvh w-full bg-background p-2 md:hidden md:p-4"
+        class="fixed z-10 h-dvh w-full bg-background p-2 lg:hidden lg:p-4"
       >
         <div
-          class="grid-rows-main grid h-full rounded-lg border border-line bg-primary-light"
+          class="grid h-full grid-rows-main rounded-lg border border-line bg-primary-light"
         >
           <div class="flex items-center border-b border-line px-4">
             <h2 class="text-label text-secondary">
@@ -43,14 +45,14 @@ const handleRoute = async (path: string) => {
             />
           </div>
           <nav>
-            <div
-              v-for="{ path, title } in headerLinks"
-              :key="path"
+            <span
+              v-for="{ name, title } in headerLinks"
+              :key="name"
               class="flex h-14 items-center border-b border-line pl-4 text-label text-primary-white"
-              @click="handleRoute(path)"
+              @click="handleRoute(name)"
             >
               {{ title }}
-            </div>
+            </span>
           </nav>
           <div class="flex border-t border-line">
             <LayoutTranslateLink class="ml-auto border-l border-line" />

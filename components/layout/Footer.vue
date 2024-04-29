@@ -44,7 +44,7 @@ const linksMap = [
 <template>
   <div class="col-span-full flex border-t border-line">
     <div
-      class="flex h-full grow items-center border-r border-line px-4 md:grow-0 md:pl-6"
+      class="flex h-full grow items-center border-r border-line px-4 lg:grow-0 lg:pl-6"
     >
       <span class="text-label text-secondary">{{ t('findMe') }}</span>
     </div>
@@ -53,7 +53,7 @@ const linksMap = [
       :key="group"
       :class="[
         group,
-        { 'border-r-0 md:border-r': index === linksMap.length - 1 },
+        { 'border-r-0 lg:border-r': index === linksMap.length - 1 },
       ]"
       :href="to"
       class="w-14 border-r border-line"

@@ -4,29 +4,27 @@ import { APP_TITLE } from '~/constants/title';
 const route = useRoute();
 
 const { headerLinks } = useHeaderLinks();
-
-const localePath = useLocalePath();
 </script>
 
 <template>
   <div
-    class="flex items-center justify-between border-b border-line px-4 md:border-r md:px-6"
+    class="flex items-center justify-between border-b border-line px-4 lg:border-r lg:px-6"
   >
     <h1 class="text-label text-secondary">
       {{ APP_TITLE }}
     </h1>
     <LayoutMobileMenu />
   </div>
-  <div class="hidden border-b border-line md:flex">
+  <nav class="hidden border-b border-line lg:flex">
     <LayoutLink
-      v-for="({ path, title }, index) in headerLinks"
-      :key="path"
-      :active="route.fullPath === localePath(path)"
+      v-for="({ name, title }, index) in headerLinks"
+      :key="name"
+      :active="route.matched.some((matchedRoute) => matchedRoute.name === name)"
       :class="{ 'ml-auto border-l': index === headerLinks.length - 1 }"
       :title="title"
-      :to="localePath(path)"
+      :to="{ name }"
       class="border-r border-line px-8"
     />
     <LayoutTranslateLink />
-  </div>
+  </nav>
 </template>
