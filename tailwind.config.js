@@ -28,6 +28,7 @@ export default {
       'accent-purple': '#C98BDF',
       'accent-blue': '#3A49A4',
       'accent-light': '#81A1C1',
+      'accent-code': '#5565E8',
       line: '#1E2D3D',
       'gradient-blue': '#4D5BCE',
       'gradient-green': '#43D9AD',
@@ -36,6 +37,7 @@ export default {
       headline: '3.875rem',
       subheadline: '2rem',
       'subheadline-mobile': '1.25rem',
+      'message-headline': '1.625rem',
       body: '1.125rem',
       label: '1rem',
       code: '0.875rem',
@@ -44,6 +46,7 @@ export default {
     extend: {
       gridTemplateColumns: {
         main: '21.5rem 1fr',
+        code: '1.5rem 1fr',
       },
       gridTemplateRows: {
         main: '3.5rem 1fr 3.25rem',

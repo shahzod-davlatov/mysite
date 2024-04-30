@@ -5,6 +5,19 @@
     "projects": "_projects",
     "contactMe": "_contact-me"
   },
+  "form": {
+    "name": "_name:",
+    "email": "_email:",
+    "message": "_message:",
+    "submit": "submit-message",
+    "sendNew": "send-new-message",
+    "thankYou": "Thank you! 🤘",
+    "sendedMessage": "Your message has been accepted. You will recieve answer really soon!",
+    "placeholder": {
+      "name": "Shahzod Davlatov",
+      "message": "Hey! Just checked your website and it looks awesome!"
+    }
+  },
   "greeting": "Hi, my name is",
   "name": "Shahzod Davlatov",
   "developer": "Frontend developer",
