@@ -6,4 +6,16 @@
   html {
     font-family: 'Fira Code', system-ui, sans-serif;
   }
+
+  ::-webkit-scrollbar {
+    @apply hidden;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply hidden;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply hidden;
+  }
 }

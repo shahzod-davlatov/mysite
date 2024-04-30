@@ -41,7 +41,6 @@ export default {
       body: '1.125rem',
       label: '1rem',
       code: '0.875rem',
-      'markdown-h1': '2rem',
     },
     extend: {
       gridTemplateColumns: {

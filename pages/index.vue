@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { GITHUB_LINK } from '~/constants/links';
 import { ROUTES_MAP } from '~/constants/routes';
-import { CONST_TITLE, GITHUB_LINK_TITLE } from '~/constants/title';
 
 definePageMeta({ name: ROUTES_MAP.MAIN });
 
@@ -10,7 +9,7 @@ const { t } = useI18n();
 
 <template>
   <div
-    class="col-span-full flex h-full items-center justify-center gap-x-20 overflow-scroll"
+    class="col-span-full flex h-full items-center justify-center gap-x-20 overflow-auto"
   >
     <CommonBlurBackground class="fixed h-5/6 lg:left-1/2 lg:-translate-x-1/4" />
     <div class="relative p-7">
@@ -29,12 +28,13 @@ const { t } = useI18n();
       </h3>
       <p class="mt-20 text-secondary">&sol;&sol; {{ t('findGithub') }}</p>
       <p class="mt-2.5 text-label text-primary-white">
-        <span class="text-secondary-blue">{{ CONST_TITLE }}&nbsp;</span>
-        <span class="text-accent-green">{{ GITHUB_LINK_TITLE }}</span> &equals;
+        <span class="text-secondary-blue">const </span>
+        <span class="text-accent-green">githubLink</span>
+        <span> = </span>
         <span class="text-accent-red">&quot;</span>
-        <span class="select-all text-accent-red underline">{{
-          GITHUB_LINK
-        }}</span>
+        <span class="select-all text-accent-red underline">
+          {{ GITHUB_LINK }}
+        </span>
         <span class="text-accent-red">&quot;</span>
       </p>
     </div>
